@@ -3,6 +3,15 @@
 #import "libs/report.typ": *
 #import "data.typ": *
 
+// MARK: Document Settings
+#set document(
+  title: details.assignment.title,
+  author: details.author.name,
+  description: details.assignment.subtitle,
+  keywords: (details.course.id, details.course.name),
+  date: datetime.today(),
+)
+
 // MARK: THE TARGET for BACK TO TOP
 #metadata("top") <top>
 
