@@ -1,6 +1,10 @@
-# University Assignment Template
+# An University Assignment Template
 
 This is a Typst template for university assignments.
+
+## Example
+
+-   Please take a look at the example: [main.pdf](main.pdf).
 
 ## Usage
 
