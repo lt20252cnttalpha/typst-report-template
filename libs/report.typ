@@ -2,7 +2,8 @@
 
 // MARK: Fonts
 
-#let sans-font = "Google Sans"
+// #let sans-font = "Google Sans"
+#let sans-font = "Montserrat"
 #let serif-font = "Lora"
 #let mono-font = "Iosevka"
 
