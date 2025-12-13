@@ -9,7 +9,7 @@
 )
 
 // #let sans-font = "Google Sans"
-#let sans-font = document-fonts.sans
+#let heading-font = document-fonts.sans
 #let serif-font = document-fonts.serif
 #let mono-font = document-fonts.mono
 
@@ -216,7 +216,7 @@
   // MARK: Custom heading styles
   show heading.where(level: 1): it => [
     #set align(left)
-    #set text(font: sans-font, size: 20pt, weight: "regular")
+    #set text(font: heading-font, size: 20pt, weight: "regular")
 
     #block(
       width: 100%,
@@ -267,15 +267,15 @@
 
     // MARK: University Name
     #if university.name != "" [
-      #text(font: sans-font, size: 20pt, weight: "regular", fill: black.lighten(50%))[#upper(university.name)] \
+      #text(font: heading-font, size: 20pt, weight: "regular", fill: black.lighten(50%))[#upper(university.name)] \
       #v(0.2em)
     ]
     #if university.college != "" [
-      #text(font: sans-font, size: 18pt, weight: "regular", fill: black.lighten(50%))[#upper(university.college)] \
+      #text(font: heading-font, size: 18pt, weight: "regular", fill: black.lighten(50%))[#upper(university.college)] \
       #v(0.2em)
     ]
     #if university.center != "" [
-      #text(font: sans-font, size: 16pt, weight: "regular", fill: black.lighten(50%))[#upper(university.center)] \
+      #text(font: heading-font, size: 16pt, weight: "regular", fill: black.lighten(50%))[#upper(university.center)] \
       #v(0.2em)
     ]
 
@@ -299,7 +299,7 @@
       ),
       width: 100%,
     )[
-      #text(font: sans-font, size: 28pt, weight: "regular")[
+      #text(font: heading-font, size: 28pt, weight: "regular")[
         #smallcaps[#assignment.title]
       ]
       #if assignment.subtitle != none [
