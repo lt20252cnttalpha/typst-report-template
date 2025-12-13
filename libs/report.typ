@@ -1,5 +1,11 @@
 // University Assignment Report Template
 
+// MARK: Fonts
+
+#let sans-font = "Google Sans"
+#let serif-font = "Lora"
+#let mono-font = "Iosevka"
+
 // MARK: Wrapper function for rounded tables
 #let rounded-table(..args) = {
   block(
