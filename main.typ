@@ -1,7 +1,7 @@
 // MARR: imports
 
 #import "template/lib.typ": *
-#import "metadata.typ": *
+#import "config/metadata.typ": *
 
 // MARK: Document Settings
 #set document(
@@ -53,7 +53,7 @@ Kết quả:
 #pagebreak()
 
 // MARK: AUTHOR INFO
-#include "content/author.typ"
+#include "author/author.typ"
 
 #pagebreak()
 

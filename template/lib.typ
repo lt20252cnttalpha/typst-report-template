@@ -69,7 +69,7 @@
   )
 
   // Raw: font, and size
-  show raw: set text(font: code-font, 1.2em)
+  show raw: set text(font: code-font, size: 1em, weight: 400)
 
   // Inline-raw
   show raw.where(block: false): box.with(
@@ -90,7 +90,7 @@
       width: 100%,
       clip: true,
     )[
-      #text(font: code-font, size: 12pt)[
+      #text(font: code-font, size: 1em)[
         #grid(
           columns: (auto, 1fr),
           // Move padding inside so the vertical line spans full height
