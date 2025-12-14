@@ -6,6 +6,7 @@
 #import "@preview/numbly:0.1.0": numbly
 
 // TODO: Use the config/metadata file.
+// TODO: Separated font set for slides/presentation and report.
 
 // MARK: - Theme
 
