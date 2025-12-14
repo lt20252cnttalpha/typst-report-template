@@ -1,7 +1,7 @@
 // MARR: imports
 
 #import "template/lib.typ": *
-#import "metadata.typ": *
+#import "config/metadata.typ": *
 
 // MARK: Document Settings
 #set document(

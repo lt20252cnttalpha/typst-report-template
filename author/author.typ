@@ -1,5 +1,5 @@
 #import "../template/lib.typ": *
-#import "../metadata.typ": *
+#import "../config/metadata.typ": *
 
 // YOUR CONTENT HERE
 
