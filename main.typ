@@ -53,7 +53,7 @@ Kết quả:
 #pagebreak()
 
 // MARK: AUTHOR INFO
-#include "content/author.typ"
+#include "author/author.typ"
 
 #pagebreak()
 
