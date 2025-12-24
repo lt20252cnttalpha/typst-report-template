@@ -1,6 +1,6 @@
-# Bài 4. Trigger & Views trong DBMS.
+# Bài 4. Chủ Đề Thứ Tư
 
-## Lorem ipsum dolor sit amet.
+## Bài 4 Mục 1 - Chứa Code
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
@@ -38,7 +38,7 @@ LEFT JOIN
 SELECT * FROM account_activity_view;
 ```
 
-## Lorem ipsum dolor sit amet.
+## Bài 4 Mục 2
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
