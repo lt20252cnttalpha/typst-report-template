@@ -44,7 +44,7 @@ Each of document type comes with a separated 'main' file:
 ### REPORT
 
 - Style:
-    - 1 page document.
+    - 1 page document (Report/Article document class in LaTeX).
 - A cover page:
     - Page number: Roman (i)
 - Common Sections: Table of Contents, List of Figures, List of Tables, List of Code Blocks, List of TODO, etc.
@@ -74,7 +74,7 @@ Each of document type comes with a separated 'main' file:
 ### THESIS
 
 - Style:
-    - 2 pages document.
+    - 2 pages document (Book document class in LaTeX).
 - Common Components:
     - Empty Page: "This page is intentionally left blank."
 - A cover pages:
