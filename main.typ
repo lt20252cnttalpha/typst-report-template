@@ -54,4 +54,12 @@
 #pagebreak()
 #include "content/quiz4.typ"
 
+// Appendix
+
+#pagebreak()
+#include "content/appendixA.typ"
+
+#pagebreak()
+#include "content/appendixB.typ"
+
 // THE END
