@@ -41,10 +41,17 @@
 #counter(page).update(1)
 
 // MARK: MAIN CONTENT
+// Page break between chapters
 
 #include "content/quiz1.typ"
+
+#pagebreak()
 #include "content/quiz2.typ"
+
+#pagebreak()
 #include "content/quiz3.typ"
+
+#pagebreak()
 #include "content/quiz4.typ"
 
 // THE END
