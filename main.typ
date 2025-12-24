@@ -62,4 +62,8 @@
 #pagebreak()
 #include "content/appendixB.typ"
 
+// Bibliography
+#pagebreak()
+#include "content/bibliography.typ"
+
 // THE END
