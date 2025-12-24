@@ -1,4 +1,6 @@
-# Bài 2.
+# Bài 2. Chủ Đề Thứ Hai
+
+## Bài 2 Mục 1 - Chứa Hình Ảnh
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
@@ -6,11 +8,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat.
 
-## Lorem ipsum dolor sit amet.
+## Bài 2 Mục 2 - Chứa Bảng
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat.
+
+Bảng Thông Tin (dàn trên nhiều trang):
 
 | **Thuộc tính**          | **Ổ đĩa (Volume/Drive)**          | **Thư mục (Folder)**             | **Tập tin (File)**                   |
 | ----------------------- | --------------------------------- | -------------------------------- | ------------------------------------ |
