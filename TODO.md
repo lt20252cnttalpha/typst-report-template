@@ -1,1 +1,1 @@
-- [ ] Code Block spands across pages.
+- [ ] Code Block spans across pages.
