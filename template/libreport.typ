@@ -86,7 +86,7 @@
   show figure.where(kind: image): set figure(supplement: "Hình ảnh")
   show figure.where(kind: table): set figure(supplement: "Bảng")
 
-  // MARK: Table formatting
+  // MARK: TABLE FORMATTING
   // Gray header and the first column
   set table(
     stroke: 0.5pt + gray,
@@ -156,13 +156,16 @@
   // MARK: COMMON FORMATTING
   show block.where(fill: rgb("#f0f8ff")): it => align(left, it)
 
+  // MARK: TEXT FORMATTING
   // Simple emphasis and strong styling
   show emph: it => text(style: "italic", weight: "medium")[#it.body]
   show strong: it => text(weight: "bold")[#it.body]
 
+  // MARK: LIST FORMATTING
   // Simple list styling
   // show list: it => block(above: 0.6em, below: 0.6em)[#it]
 
+  // MARK: QUOTE FORMATTING
   // Simple quote styling
   show quote: it => block(
     align(center),
@@ -175,6 +178,7 @@
     #it
   ]
 
+  // MARK: TODO FORMATTING
   // Show TODO content/body only
   show figure.where(kind: "todo"): it => it.body
 
