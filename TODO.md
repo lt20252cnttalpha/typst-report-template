@@ -123,7 +123,7 @@ Each of document type comes with a separated 'main' file:
 
 ## TODO:
 
-- [ ] Pandoc: Include the import statement in every converted file: `#import "../template/lib.typ": *`. We need a common lib file for every document type.
+- [x] Pandoc: Include the import statement in every converted file: `#import "../template/lib.typ": *`. We need a common lib file for every document type.
 - [ ] Code Block spans across pages.
 - [ ] Pandoc: code block with '```' to figure (with or without caption).
 - [ ] Pandoc: table with caption.
