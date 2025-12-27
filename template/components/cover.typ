@@ -48,6 +48,8 @@
     #v(1em)
 
     // MARK: Title
+    // Sử dụng block để tạo khung cho title và subtitle
+    // Stroke: chỉ hiển thị ở phía trên và dưới
     #block(
       radius: 12pt,
       inset: 4em,
@@ -59,15 +61,18 @@
       ),
       width: 100%,
     )[
-      #text(font: heading-font, size: 28pt, weight: "regular")[
-        #smallcaps[#assignment.title]
-      ]
-      #if assignment.subtitle != none and assignment.subtitle != "" [
-        #v(0.5em)
-        #text(size: 20pt, weight: "regular")[
-          #assignment.subtitle
-        ]
-      ]
+      #stack(
+        dir: ttb,
+        spacing: 1.5em, // Khoảng cách (vspace) giữa title và subtitle
+        text(font: heading-font, size: 20pt, weight: "regular")[
+          #smallcaps[#assignment.title]
+        ],
+        if assignment.subtitle != none and assignment.subtitle != "" {
+          text(size: 28pt, weight: "regular")[
+            #assignment.subtitle
+          ]
+        },
+      )
     ]
   ]
 
