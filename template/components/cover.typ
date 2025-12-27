@@ -1,4 +1,5 @@
-#import "../fonts.typ": *
+#import "/template/fonts.typ": *
+#import "/template/utils.typ": static
 
 #let cover-page(
   university: (:),
@@ -35,7 +36,7 @@
       dir: ltr,
       spacing: 1em,
       if university.keys().contains("logo") and university.logo != "" {
-        image("../../static/" + university.logo, width: 3cm)
+        image(static(university.logo), width: 5cm)
       } else {
         box(height: 3cm, width: 3cm, stroke: 0.5pt + black.lighten(90%), radius: 50%, fill: none)[
           #align(center + horizon)[
