@@ -1,3 +1,5 @@
+#import "../template/lib.typ": *
+
 = Bài 4. Chủ Đề Thứ Tư
 <bai-4-chu-de-thu-tu>
 

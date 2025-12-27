@@ -1,3 +1,5 @@
+#import "../template/lib.typ": *
+
 = Phụ Lục A
 <phu-luc-a>
 

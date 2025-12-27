@@ -1,3 +1,5 @@
+#import "../template/lib.typ": *
+
 = Bibliography
 <bibliography>
 

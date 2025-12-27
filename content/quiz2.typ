@@ -1,3 +1,5 @@
+#import "../template/lib.typ": *
+
 = Bài 2. Chủ Đề Thứ Hai
 <bai-2-chu-de-thu-hai>
 
