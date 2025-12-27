@@ -5,7 +5,7 @@
     name: "Trường Đại Học TP. Hồ Chí Minh",
     college: "Trường Đại Học Công Nghệ Thông Tin",
     center: "Trung Tâm Phát Triển Công Nghệ Thông Tin",
-    logo: "",
+    logo: "uit.jpeg",
   ),
   course: (
     id: "IE103",
