@@ -50,6 +50,14 @@
     spacing: 1.5em,
   )
 
+  // MARK: COMMON FORMATTING
+  // Heading settings
+  set heading(numbering: "1.")
+  // Indent for List
+  set list(indent: 1em)
+  // Indent for Enum
+  set enum(indent: 1em)
+
   // MARK: Figure Supplement
   // Rename "Figure" to "Mã nguồn", "Hình ảnh", "Bảng"
   show figure.where(kind: raw): set figure(supplement: "Mã nguồn")

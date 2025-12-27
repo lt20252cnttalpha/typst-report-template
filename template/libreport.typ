@@ -42,14 +42,13 @@
     spacing: 1.5em,
   )
 
-  // MARK: Heading
+  // MARK: COMMON FORMATTING
   // Heading settings
   set heading(numbering: "1.")
   // Indent for List
   set list(indent: 1em)
   // Indent for Enum
   set enum(indent: 1em)
-  // set par()
 
   // Line Numbering implemented in show rule below
 
