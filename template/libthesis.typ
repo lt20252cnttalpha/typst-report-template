@@ -5,7 +5,7 @@
 // - Main content
 // - Appendix
 // - Back matter
-// Định dạng: 1 trang hoặc 2 trang (book)
+// Định dạng: 1 mặt hoặc 2 mặt (book)
 
 #import "fonts.typ": *
 #import "utils.typ": *
@@ -42,6 +42,8 @@
     author: author,
     assignment: assignment,
   )
+
+  // If a 2-sided document, add a blank page
   pagebreak()
 
   // Empty Page after Hard Cover
