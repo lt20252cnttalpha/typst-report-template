@@ -66,6 +66,17 @@
   show figure.where(kind: image): set figure(supplement: "Hình ảnh")
   show figure.where(kind: table): set figure(supplement: "Bảng")
 
+  // MARK: TABLE FORMATTING
+  // Tắt chế độ căn lề đều trong bảng
+  show table: set par(justify: false)
+  // Header của bảng được tô màu xanh dương
+  set table(
+    stroke: 0.5pt + blue.lighten(90%),
+    fill: (x, y) => if y == 0 {
+      blue.lighten(90%)
+    },
+  )
+
   // MARK: Cover Page
   // Trang Bìa
   // Không có số trang, không có header, footer
