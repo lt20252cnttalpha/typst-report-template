@@ -188,6 +188,7 @@
   // Trang Bìa
   // Không có số trang, không có header, footer
   set page(header: none, footer: none, numbering: none)
+  // Hiển thị Trang Bìa
   cover-page(
     university: university,
     course: course,
