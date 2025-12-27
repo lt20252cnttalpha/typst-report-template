@@ -1,23 +1,28 @@
 // MARK: Wrapper function for rounded tables
+// A rounded table with bottom lines
 #let rounded-table(..args) = {
   block(
-    radius: 8pt, // Adjust this for more/less roundness
-    stroke: 1pt + luma(220), // The outer border color
-    clip: true, // This cuts off the square corners
-    width: 100%, // Ensures it fits the page
-    inset: 0pt, // No gap between border and table
+    radius: 8pt, // Góc bo tròn
+    stroke: 1pt + blue.lighten(90%), // Đường viền ngoài
+    clip: true, // Cắt góc vuông
+    width: 100%, // Đảm bảo nó vừa với trang
+    inset: 0pt, // Không có khoảng trống giữa viền và bảng
 
     // The inner table
     table(
       ..args,
-      stroke: none, // We turn off the default grid to avoid double borders
-      // We add horizontal lines between rows for a clean look
-      align: (x, y) => if y == 0 { center } else { left },
+      stroke: (
+        // Only draw bottom lines, and NOT on the last row
+        bottom: 0.5pt + blue.lighten(90%),
+        top: none,
+        left: none,
+        right: none,
+      ),
     ),
   )
 }
 
-// MARK: Rounded border table with lines
+// MARK: Rounded border table with grid lines
 
 #let rounded-table-lined(..args) = block(
   // Góc bo tròn
@@ -29,11 +34,12 @@
   inset: 0pt,
   table(
     ..args,
-    // Only draw bottom lines, and NOT on the last row
     stroke: (x, y) => (
       top: none,
-      bottom: 1pt + blue.lighten(90%),
-      left: 1pt + blue.lighten(90%),
+      // Bottom lines
+      bottom: 0.5pt + blue.lighten(90%),
+      // Left lines
+      left: 0.5pt + blue.lighten(90%),
       right: none,
     )
   ),
