@@ -26,3 +26,8 @@
     }
   }
 }
+
+// MARK: Static Assets
+// Define the root for static assets
+#let static-root = "/static/"
+#let static(path) = static-root + path
