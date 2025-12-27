@@ -64,7 +64,7 @@
     // Must start on odd page
     pagebreak(weak: true, to: "odd")
     block(below: 2em)[
-      #set align(center)
+      #set align(left)
       #text(size: 24pt, weight: "bold")[#it.body]
     ]
   }
@@ -113,22 +113,25 @@
     counter(page).update(1)
 
     // Update Heading styling for Chapters
-    set heading(numbering: "Chapter 1.")
+    set heading(numbering: "1.")
 
     // Custom Chapter Heading
     show heading.where(level: 1): it => {
-      cleartoodd()
+      // Nếu là 2-mặt, thì thêm cleartoodd()
+      // cleartoodd()
+      // else, thêm pagebreak()
+      pagebreak()
       // Check if it's a "Chapter" or "Appendix" based on numbering?
       // For now, assume Chapter.
-      v(15%)
-      align(right)[
-        #text(size: 18pt, weight: "bold", fill: gray)[CHƯƠNG #counter(heading).display()]
+      // v(15%)
+      align(left)[
+        #text(size: 18pt, weight: "bold", fill: gray)[CHƯƠNG #counter(heading).display("1.")]
         #v(0.5em)
         #text(size: 30pt, weight: "bold")[#it.body]
         #v(1em)
         #line(length: 100%, stroke: 2pt + black)
       ]
-      v(5em)
+      v(1em)
     }
 
     rest
@@ -144,16 +147,19 @@
   set heading(numbering: "A.1", supplement: "Phụ Lục")
 
   show heading.where(level: 1): it => {
-    cleartoodd()
-    v(15%)
-    align(right)[
+    // Nếu là 2-mặt, thì thêm cleartoodd()
+    // cleartoodd()
+    // else, thêm pagebreak()
+    pagebreak()
+    // v(15%)
+    align(left)[
       #text(size: 18pt, weight: "bold", fill: gray)[PHỤ LỤC #counter(heading).display()]
       #v(0.5em)
       #text(size: 30pt, weight: "bold")[#it.body]
       #v(1em)
       #line(length: 100%, stroke: 2pt + black)
     ]
-    v(5em)
+    v(1em)
   }
 
   body
