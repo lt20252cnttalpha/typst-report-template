@@ -172,7 +172,7 @@
   // Add the Cover page to TOC
   // place(hide(unheading[Trang Bìa (#assignment.title)]))
 
-  // MARK: Title Page
+  // MARK: Cover Page
   // Trang Bìa
   // Không có số trang, không có header, footer
   set page(header: none, footer: none, numbering: none)

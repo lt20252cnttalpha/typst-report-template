@@ -50,11 +50,10 @@
     spacing: 1.5em,
   )
 
-  // ------------------------------------------------------------------
-  // 1. HARD COVER (No page numbering, not counted)
-  // ------------------------------------------------------------------
-  set page(header: none, footer: none)
-
+  // MARK: Cover Page
+  // Trang Bìa
+  // Không có số trang, không có header, footer
+  set page(header: none, footer: none, numbering: none)
   cover-page(
     university: university,
     course: course,
