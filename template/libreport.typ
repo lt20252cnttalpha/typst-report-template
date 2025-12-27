@@ -62,6 +62,16 @@
     ]
   ]
 
+  // show heading.where(level: 2): it => [
+  //   #set text(font: sans-font, size: 18pt, weight: "regular", fill: rgb(50, 50, 50))
+  //   #block(above: 1.2em, below: 0.8em)[#it.body]
+  // ]
+
+  // show heading.where(level: 3): it => [
+  //   #set text(font: sans-font, size: 16pt, weight: "regular", fill: rgb(50, 50, 50))
+  //   #block(above: 1.2em, below: 0.8em)[#it.body]
+  // ]
+
   // MARK: COMMON FORMATTING
   // Indent for List
   set list(indent: 1em)
@@ -143,17 +153,8 @@
     ]
   ]
 
+  // MARK: COMMON FORMATTING
   show block.where(fill: rgb("#f0f8ff")): it => align(left, it)
-
-  // show heading.where(level: 2): it => [
-  //   #set text(font: sans-font, size: 18pt, weight: "regular", fill: rgb(50, 50, 50))
-  //   #block(above: 1.2em, below: 0.8em)[#it.body]
-  // ]
-
-  // show heading.where(level: 3): it => [
-  //   #set text(font: sans-font, size: 16pt, weight: "regular", fill: rgb(50, 50, 50))
-  //   #block(above: 1.2em, below: 0.8em)[#it.body]
-  // ]
 
   // Simple emphasis and strong styling
   show emph: it => text(style: "italic", weight: "medium")[#it.body]
