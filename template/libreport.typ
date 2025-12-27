@@ -89,7 +89,6 @@
     fill: (x, y) => if y == 0 {
       blue.lighten(90%)
     },
-    align: center,
   )
 
   // MARK: RAW/CODE BLOCK FORMATTING
