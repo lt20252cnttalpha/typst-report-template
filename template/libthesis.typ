@@ -44,10 +44,9 @@
   )
 
   // If a 2-sided document, add a blank page
-  pagebreak()
-
   // Empty Page after Hard Cover
-  empty-page()
+  // empty-page()
+
   // REMOVED/XÓA SOFT COVER
   // TODO: Nếu có tùy chọn 1-mặt/2-mặt, thì thêm soft cover
 
@@ -83,15 +82,18 @@
   // Cleartoodd handled by heading show rule?
   // Standard outline usually doesn't trigger heading show rule.
 
-  cleartoodd()
+  // Nếu là 2-mặt, thì thêm cleartoodd()
+  // cleartoodd()
   heading("Mục Lục")
   outline(depth: 3, indent: auto)
 
-  cleartoodd()
+  // Nếu là 2-mặt, thì thêm cleartoodd()
+  // cleartoodd()
   heading("Danh Sách Hình Ảnh")
   outline(title: none, target: figure.where(kind: image))
 
-  cleartoodd()
+  // Nếu là 2-mặt, thì thêm cleartoodd()
+  // cleartoodd()
   heading("Danh Sách Bảng")
   outline(title: none, target: figure.where(kind: table))
 
