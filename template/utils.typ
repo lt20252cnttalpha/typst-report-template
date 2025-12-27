@@ -8,7 +8,7 @@
   pagebreak()
   set page(header: none, footer: none)
   align(center + horizon)[
-    #text(fill: gray.lighten(50%))[This page is intentionally left blank.]
+    #text(fill: gray.lighten(50%))[Trang này được cố tình để trống.]
   ]
 }
 
@@ -20,7 +20,7 @@
     if calc.even(here().page()) {
       set page(header: none, footer: none)
       align(center + horizon)[
-        #text(fill: gray.lighten(50%))[This page is intentionally left blank.]
+        #text(fill: gray.lighten(50%))[Trang này được cố tình để trống.]
       ]
       pagebreak()
     }
