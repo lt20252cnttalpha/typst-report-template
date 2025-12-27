@@ -3,6 +3,9 @@
 
 #show: report.with(..data)
 
+// Author
+#include "author/author.typ"
+
 // Content goes here
 #include "content/quiz1.typ"
 #pagebreak()
