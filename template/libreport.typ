@@ -8,41 +8,24 @@
 // MARK: The Template
 
 #let report(
-  university: (
-    name: "",
-    college: "",
-    center: "",
-  ),
-  course: (
-    id: "",
-    name: "",
-    class: "",
-  ),
+  university: (:),
+  course: (:),
   instructor: "",
-  author: (
-    name: "",
-    members: (),
-  ),
-  assignment: (
-    title: "",
-    subtitle: "",
-    type: "",
-    date: "",
-    duration: "",
-    location: "",
-  ),
+  author: (:),
+  assignment: (:),
   ..args,
   body,
 ) = {
-  // Page setup
+  // MARK: Page Setup
+  // Page margin
   set page(margin: 2cm)
   // The ROMAN page number
   set page(numbering: "i")
   // set text(font: "CMU Concrete", size: 12pt, weight: "regular")
   set text(font: body-font, size: 12pt, weight: "regular")
 
-
-  // Paragraph
+  // MARK: Paragraph
+  // Paragraph settings
   set par(
     leading: 0.8em, // Controls space between lines WITHIN a paragraph
     justify: true, // Recommended for assignments to align text edges
