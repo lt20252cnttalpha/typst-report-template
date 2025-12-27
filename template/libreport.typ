@@ -72,12 +72,6 @@
   //   #block(above: 1.2em, below: 0.8em)[#it.body]
   // ]
 
-  // MARK: COMMON FORMATTING
-  // Indent for List
-  set list(indent: 1em)
-  // Indent for Enum
-  set enum(indent: 1em)
-
   // Line Numbering implemented in show rule below
 
   // MARK: Figure Supplement
@@ -164,6 +158,10 @@
   // MARK: LIST FORMATTING
   // Simple list styling
   // show list: it => block(above: 0.6em, below: 0.6em)[#it]
+  // Indent for List
+  set list(indent: 1em)
+  // Indent for Enum
+  set enum(indent: 1em)
 
   // MARK: QUOTE FORMATTING
   // Simple quote styling
