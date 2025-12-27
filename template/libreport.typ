@@ -45,6 +45,8 @@
   // MARK: COMMON FORMATTING
   // Heading settings
   set heading(numbering: "1.")
+  // vspace after/below every heading
+  show heading: set block(below: 1.2em)
   // Indent for List
   set list(indent: 1em)
   // Indent for Enum
@@ -119,9 +121,6 @@
   ]
 
   show block.where(fill: rgb("#f0f8ff")): it => align(left, it)
-
-  // vspace after/below every heading
-  show heading: set block(below: 1.2em)
 
   // MARK: Custom heading styles
   show heading.where(level: 1): it => [

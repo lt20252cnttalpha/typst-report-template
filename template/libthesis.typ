@@ -53,6 +53,8 @@
   // MARK: COMMON FORMATTING
   // Heading settings
   set heading(numbering: "1.")
+  // vspace after/below every heading
+  show heading: set block(below: 1.2em)
   // Indent for List
   set list(indent: 1em)
   // Indent for Enum
