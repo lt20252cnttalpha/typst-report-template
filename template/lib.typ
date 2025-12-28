@@ -166,7 +166,18 @@
     set page(header: none, footer: none, numbering: none)
     // No Heading Numbering, No Outlined
     set heading(numbering: none, outlined: false)
+    // We place the thesis summary here
     include "/content/summary.typ"
+  }
+
+  // MARK: Report Author
+  if type == "report" {
+    // No Header/Footer, No Numbering
+    set page(header: none, footer: none, numbering: none)
+    // No Heading Numbering, No Outlined
+    set heading(numbering: none, outlined: false)
+    // We place the author information here
+    include "/author/author.typ"
   }
 
   // MARK: Front Matter
