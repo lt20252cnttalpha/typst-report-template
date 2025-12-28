@@ -14,7 +14,7 @@
   author: (:),
   assignment: (:),
   // Lớp/Loại tài liệu
-  class: "",
+  type: "",
   ..args,
   body,
 ) = {
@@ -184,7 +184,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if class == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
@@ -195,7 +195,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if class == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
@@ -206,7 +206,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if class == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
@@ -217,7 +217,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if class == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
