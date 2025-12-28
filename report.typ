@@ -11,6 +11,10 @@
 #pagebreak()
 #include "content/quiz2.typ"
 #pagebreak()
+#include "content/quiz3.typ"
+#pagebreak()
+#include "content/quiz4.typ"
+#pagebreak()
 #show: appendix
 #include "content/appendixA.typ"
 
