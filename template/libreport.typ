@@ -139,7 +139,7 @@
   // TODOs
   show figure.where(kind: "todo"): it => it.body
 
-  // MARK: Section - Cover Page
+  // MARK: Cover Page
   // No headers/footers, no numbering
   set page(header: none, footer: none, numbering: none)
   cover-page(
@@ -151,12 +151,24 @@
   )
   pagebreak()
 
-
+  // MARK: Front Matter
   // Roman numbering, Header/Footer active
-  set page(header: auto, footer: auto, numbering: "i", number-align: center)
   counter(page).update(1)
 
-  // MARK: Section - Front Matter (TOC, Lists)
+  // Căn giữa và làm mờ số trang
+  set page(
+    header: auto,
+    numbering: "i",
+    number-align: center,
+    footer: context [
+      #set text(size: 10pt, fill: gray)
+      #align(center)[
+        #counter(page).display(page.numbering)
+      ]
+    ],
+  )
+
+  // MARK: TOC & Lists
   // Rename "Figure" supplements
   show figure.where(kind: raw): set figure(supplement: "Mã nguồn")
   show figure.where(kind: image): set figure(supplement: "Hình ảnh")
