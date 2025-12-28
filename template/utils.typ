@@ -1,3 +1,9 @@
+// /template/utils.typ
+// Common utility functions for reports and thesis
+// Author: Sam Dinh
+// Version: 0.1.0
+// License: MIT
+
 // MARK: Unheading (Heading without numbering, for TOC entries)
 #let unheading(body) = {
   heading(level: 1, numbering: none, outlined: true)[#body]
