@@ -153,6 +153,15 @@
   )
   pagebreak()
 
+  // MARK: Thesis Summary
+  if type == "thesis" {
+    // No Header/Footer, No Numbering
+    set page(header: none, footer: none, numbering: none)
+    // No Heading Numbering, No Outlined
+    set heading(numbering: none, outlined: false)
+    include "/content/summary.typ"
+  }
+
   // MARK: Front Matter
   // Roman numbering, Header/Footer active
   counter(page).update(1)
