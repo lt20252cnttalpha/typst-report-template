@@ -31,3 +31,22 @@
 // Define the root for static assets
 #let static-root = "/static/"
 #let static(path) = static-root + path
+
+// MARK: Styled Link
+// Link that respects text color but underlines, or specific color
+#let styled-link(dest, content) = {
+  link(dest)[#text(fill: rgb("#0000EE"))[#content]]
+}
+
+// MARK: TOC Section Wrapper
+// Standardizes the appearance of TOC, List of Tables, etc.
+#let toc-section-wrapper(body) = {
+  block(
+    radius: 8pt,
+    fill: rgb(248, 250, 252),
+    stroke: 1pt + rgb(200, 220, 240),
+    inset: 1.5em,
+    width: 100%,
+    body,
+  )
+}
