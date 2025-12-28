@@ -13,8 +13,8 @@
   instructor: "",
   author: (:),
   assignment: (:),
-  // Lớp/Loại tài liệu
-  type: "",
+  // Lớp/Loại tài liệu, mặc định là report
+  type: "report",
   ..args,
   body,
 ) = {
