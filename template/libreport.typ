@@ -241,6 +241,45 @@
   set page(numbering: "1", number-align: right)
   counter(page).update(1)
 
+  // Custom Heading 1 Style
+  show heading.where(level: 1): it => {
+    // Dành cho Report
+    if type == "report" {
+      align(left)[
+        #set text(font: heading-font, size: 20pt, weight: "regular")
+        #block(
+          width: 100%,
+          stroke: (bottom: 0.5pt + rgb("#808080")),
+          inset: (bottom: 0.5em),
+        )[
+          #smallcaps[#it.body]
+        ]
+      ]
+    } else {
+      // Dành cho Thesis
+      align(left)[
+        #stack(
+          dir: ttb,
+          spacing: 2em,
+          text(
+            font: heading-font,
+            size: 18pt,
+            weight: "regular",
+            fill: black.lighten(60%),
+          )[CHƯƠNG #counter(heading).display("1.")],
+          text(
+            font: heading-font,
+            size: 30pt,
+            weight: "regular",
+          )[#smallcaps[#it.body]],
+          line(length: 100%, stroke: 1pt + black.lighten(60%)),
+        )
+      ]
+    }
+    // Thêm khoảng trắng (vspace) sau heading title
+    v(0.5em)
+  }
+
   // MARK: Section - Footer
   // Footer with "Back to Top"
   set page(footer: context [
