@@ -12,6 +12,8 @@
   instructor: "",
   author: (:),
   assignment: (:),
+  // Lớp/Loại tài liệu
+  class: "",
   ..args,
   body,
 ) = {
@@ -180,11 +182,21 @@
     #outline(title: none, indent: auto, depth: 2)
   ]
 
+  // Nếu tài liệu là luận văn, thêm trang trắng
+  if class == "thesis" {
+    pagebreak()
+  }
+
   // List of Tables
   toc-section-wrapper(blue)[
     #unheading[Danh Sách Bảng]
     #outline(title: none, target: figure.where(kind: table))
   ]
+
+  // Nếu tài liệu là luận văn, thêm trang trắng
+  if class == "thesis" {
+    pagebreak()
+  }
 
   // List of Figures
   toc-section-wrapper(blue)[
@@ -192,11 +204,21 @@
     #outline(title: none, target: figure.where(kind: image))
   ]
 
+  // Nếu tài liệu là luận văn, thêm trang trắng
+  if class == "thesis" {
+    pagebreak()
+  }
+
   // List of Code Snippets
   toc-section-wrapper(blue)[
     #unheading[Danh Sách Mã Nguồn]
     #outline(title: none, target: figure.where(kind: raw))
   ]
+
+  // Nếu tài liệu là luận văn, thêm trang trắng
+  if class == "thesis" {
+    pagebreak()
+  }
 
   // List of TODOs (Conditional)
   context {
