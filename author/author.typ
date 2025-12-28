@@ -3,7 +3,7 @@
 
 // YOUR CONTENT HERE
 
-#unheading[#data.author.name]
+= #data.author.name
 
 Thành viên của nhóm và bảng nhiệm vụ.
 
