@@ -260,7 +260,6 @@
           font: heading-font,
           size: 20pt,
           weight: "regular",
-          fill: black.lighten(60%),
         )
         #block(
           width: 100%,
