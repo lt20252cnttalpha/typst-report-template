@@ -232,8 +232,8 @@
   }
 
   // Spacing after TOC
-  v(2em)
-  v(0.5em)
+  // v(2em)
+  // v(0.5em)
 
   // MARK: Section - Main Content
   // Arabic numbering, Right aligned
