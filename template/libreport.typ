@@ -271,7 +271,7 @@
             size: 18pt,
             weight: "regular",
             fill: black.lighten(60%),
-          )[CHƯƠNG #counter(heading).display("1.")],
+          )[#if it.numbering != none [CHƯƠNG #counter(heading).display(it.numbering)]],
           text(
             font: heading-font,
             size: 30pt,
