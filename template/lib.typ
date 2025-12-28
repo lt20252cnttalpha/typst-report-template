@@ -1,3 +1,10 @@
+// /template/lib.typ
+// Template library for reports and thesis
+// Author: Sam Dinh
+// Version: 0.1.0
+// License: MIT
+
+// MARK: Imports
 #import "fonts.typ": *
 #import "utils.typ": *
 #import "components/callout.typ": *
@@ -116,7 +123,7 @@
     ]
   ]
 
-  // MARK: Formatting - General
+  // MARK: General Formatting
   // Emph & Strong
   show emph: it => text(style: "italic", weight: "medium")[#it.body]
   show strong: it => text(weight: "bold")[#it.body]
@@ -244,7 +251,7 @@
   // v(2em)
   // v(0.5em)
 
-  // MARK: Section - Main Content
+  // MARK: Main Content
   // Arabic numbering, Right aligned
   set page(numbering: "1", number-align: right)
   counter(page).update(1)
@@ -294,7 +301,7 @@
     v(0.5em)
   }
 
-  // MARK: Section - Footer
+  // MARK: Footer
   // Footer with "Back to Top"
   set page(footer: context [
     #set text(size: 10pt, fill: gray)
