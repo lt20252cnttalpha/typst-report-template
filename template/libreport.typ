@@ -296,8 +296,34 @@
 }
 
 // MARK: Appendix Helper
+// Phụ Lục
 #let appendix(body) = {
   counter(heading).update(0)
   set heading(numbering: "A.1", supplement: "Phụ Lục")
+
+  show heading.where(level: 1): it => {
+    pagebreak()
+    align(left)[
+      #stack(
+        dir: ttb,
+        spacing: 1.5em,
+        text(
+          font: heading-font,
+          size: 18pt,
+          weight: "regular",
+          fill: black.lighten(60%),
+        )[PHỤ LỤC #counter(heading).display()],
+        text(
+          font: heading-font,
+          size: 30pt,
+          weight: "regular",
+        )[#it.body],
+        line(length: 100%, stroke: 1pt + black.lighten(60%)),
+      )
+    ]
+    // Thêm khoảng trắng (vspace) sau heading title
+    v(1em)
+  }
+
   body
 }
