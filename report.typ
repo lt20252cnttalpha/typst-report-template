@@ -19,5 +19,5 @@
 #include "content/appendixA.typ"
 
 // Show bibliography
-#show: bibliography
-#include "content/bibliography.typ"
+#show: bibliography-page
+#bibliography("content/bibliography.bib", title: "Tài Liệu Tham Khảo")
