@@ -373,6 +373,7 @@
 #let bibliography-page(body) = {
   counter(heading).update(0)
   set heading(numbering: "I", supplement: "Tài Liệu Tham Khảo")
+  show link: set text(fill: blue)
 
   show heading.where(level: 1): it => {
     pagebreak()
