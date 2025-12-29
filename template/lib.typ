@@ -41,6 +41,9 @@
     spacing: 1.5em,
   )
 
+  // MARK: Citation Text Style
+  show cite: set text(style: "italic", fill: blue)
+
   // MARK: Formatting - Headings
   set heading(numbering: "1.")
   show heading: set block(below: 1.2em)
