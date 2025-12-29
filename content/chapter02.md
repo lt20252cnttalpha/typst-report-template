@@ -1,6 +1,6 @@
 # Phân Tích Và Thiết Kế
 
-## Bài 2 Mục 1 - Chứa Hình Ảnh
+## Các Chức Năng Nghiệp Vụ
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
@@ -8,7 +8,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat.
 
-## Bài 2 Mục 2 - Chứa Bảng
+## Đối Tượng và Mối Quan Hệ
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
 
@@ -24,3 +24,7 @@ Bảng Thông Tin (dàn trên nhiều trang):
 | **Ngày tháng**          | Ngày tạo phân vùng.               | Ngày tạo, ngày sửa đổi nội dung. | Ngày tạo, sửa đổi, mở gần nhất.      |
 | **Quyền (Permissions)** | Quản trị hệ thống (System R/W).   | Read/Write/Execute (truy cập).   | Read/Write/Execute (thao tác).       |
 | **Khác**                | Mount point, thông tin phần cứng. | Số lượng mục con (items count).  | App mặc định (Open with).            |
+
+## Mô Hình Mức Quan Niệm
+
+## Thiết Kế Cơ Sở Dữ Liệu
