@@ -303,7 +303,7 @@
         table.header([*Viết Tắt*], [*Nghĩa Đầy Đủ*]),
         ..content,
       ),
-      caption: [**Bảng Viết Tắt**],
+      caption: [*Bảng Viết Tắt*],
       kind: table,
       // Đặc thù, không thêm vào danh sách bảng.
       outlined: false,
