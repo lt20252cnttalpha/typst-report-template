@@ -21,7 +21,7 @@
   author: (:),
   assignment: (:),
   // Lớp/Loại tài liệu, mặc định là report
-  type: "report",
+  doc-type: "report",
   acronyms: none,
   ..args,
   body,
@@ -165,7 +165,7 @@
   pagebreak()
 
   // MARK: Thesis Summary
-  if type == "thesis" {
+  if doc-type == "thesis" {
     // No Header/Footer, No Numbering
     set page(header: none, footer: none, numbering: none)
     // No Heading Numbering, No Outlined
@@ -175,7 +175,7 @@
   }
 
   // MARK: Report Author
-  if type == "report" {
+  if doc-type == "report" {
     // No Header/Footer, No Numbering
     set page(header: none, footer: none, numbering: none)
     // No Heading Numbering, No Outlined
@@ -214,7 +214,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if type == "thesis" {
+  if doc-type == "thesis" {
     pagebreak()
   }
 
@@ -225,7 +225,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if type == "thesis" {
+  if doc-type == "thesis" {
     pagebreak()
   }
 
@@ -236,7 +236,7 @@
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if type == "thesis" {
+  if doc-type == "thesis" {
     pagebreak()
   }
 
@@ -252,7 +252,7 @@
     // Chỉ hiện thị danh sách TODO nếu có
     if todos.len() > 0 {
       // Nếu tài liệu là luận văn, thêm trang trắng
-      if type == "thesis" {
+      if doc-type == "thesis" {
         pagebreak()
         toc-section-wrapper(red)[
           #unheading[Danh Sách TODO]
@@ -264,7 +264,7 @@
 
   if acronyms != none and acronyms.len() > 0 {
     // Nếu tài liệu là luận văn, thêm trang trắng
-    if type == "thesis" {
+    if doc-type == "thesis" {
       pagebreak()
     }
 
@@ -299,7 +299,7 @@
     // Tự động ngắt trang
     pagebreak()
     // Dành cho Report
-    if type == "report" {
+    if doc-type == "report" {
       align(left)[
         #set text(
           font: heading-font,
