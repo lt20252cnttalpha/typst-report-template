@@ -6,7 +6,7 @@
 #import "config/metadata.typ": data
 
 // Show document with report type
-#show: document.with(..data, type: "report")
+#show: document.with(..data, doc-type: "report")
 
 // Content goes here
 #include "content/chapter01.typ"
