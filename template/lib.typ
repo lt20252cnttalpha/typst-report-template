@@ -316,7 +316,7 @@
   // v(2em)
   // v(0.5em)
 
-  // MARK: Main Content
+  // MARK: Nội Dung Chính
   // Arabic numbering, Right aligned
   set page(numbering: "1", number-align: right)
   counter(page).update(1)
