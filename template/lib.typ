@@ -262,26 +262,53 @@
     }
   }
 
+  // MARK: Bảng Viết Tắt
   if acronyms != none and acronyms.len() > 0 {
     // Nếu tài liệu là luận văn, thêm trang trắng
     if doc-type == "thesis" {
       pagebreak()
     }
 
-    // TODO: Dùng bảng trực tiếp từ Markdown để bỏ qua biến acronyms
+    // Heading của bảng viết tắt
     [ #unheading[Bảng Viết Tắt] ]
-    // Create table from acronyms dictionary wrapped in figure
+
+    // Nếu acronyms là dictionary
+    let content = if type(acronyms) == dictionary {
+      acronyms.pairs().map(((key, value)) => (key, value)).flatten()
+      // Nếu acronyms là array
+    } else if type(acronyms) == array {
+      // Nếu file csv có sẵn header, bỏ header ra khỏi array
+      if acronyms.len() > 0 and acronyms.at(0).at(0) == "Viết Tắt" {
+        acronyms.slice(1).flatten()
+      } else {
+        acronyms.flatten()
+      }
+    } else {
+      ()
+    }
+
+    // Tạo bảng viết tắt
     figure(
       table(
+        // Tỉ lệ cột là 20% và 80%
         columns: (20%, 80%),
-        stroke: 0.5pt + blue.lighten(98%),
+        // Khoảng cách giữa các cột
+        // gutter: 2em,
+        // Khoảng cách từ boder đến edge
+        inset: 0.5em,
+        // Màu border
+        stroke: 0.5pt + orange.lighten(90%),
+        // Căn lề cột
         align: (right, left),
-        table.header([*Viết Tắt*], [*Nghĩa*]),
-        ..acronyms.pairs().map(((key, value)) => (key, value)).flatten(),
+        table.header([*Viết Tắt*], [*Nghĩa Đầy Đủ*]),
+        ..content,
       ),
-      caption: [Bảng Viết Tắt],
+      caption: [**Bảng Viết Tắt**],
       kind: table,
+      // Đặc thù, không thêm vào danh sách bảng.
       outlined: false,
+      // Không đánh số thứ tự cho bảng.
+      numbering: none,
     )
   }
 
