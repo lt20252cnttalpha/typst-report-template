@@ -263,6 +263,7 @@
   }
 
   // MARK: Bảng Viết Tắt
+  // Chỉ hiện thị bảng viết tắt nếu được chỉ định
   if acronyms != none and acronyms.len() > 0 {
     // Nếu tài liệu là luận văn, thêm trang trắng
     if doc-type == "thesis" {
