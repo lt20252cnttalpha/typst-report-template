@@ -3,7 +3,7 @@
 
 // YOUR CONTENT HERE
 
-#unheading[#data.author.name]
+= #data.author.name
 
 Thành viên của nhóm và bảng nhiệm vụ.
 
@@ -26,7 +26,7 @@ Thành viên của nhóm và bảng nhiệm vụ.
     }
     // TODO: Span full width automatically
     // TODO: import/use csv data instead of hardcoding
-    #rounded-table-lined(
+    #table(
       columns: (10%, 20%, 40%, 30%),
       align: (right, right, left, left),
       table.header([No], [MSSV], [Họ và Tên], [Phụ Trách]),
@@ -34,7 +34,7 @@ Thành viên của nhóm và bảng nhiệm vụ.
       [01],
       [15410301],
       [Nguyễn Văn A],
-      [@bai-2[Bài]],
+      [],
       [02],
       [15410319],
       [Trần Minh Tuấn],

@@ -5,6 +5,7 @@ to: typst
 # List both filters in order
 filters:
   # Vietnamese to ASCII conversion
+  - pandoc/add-import.lua
   - pandoc/vietnamese-slugs.lua
   # Extra empty lines after a heading (vertical spacing)
   - pandoc/vspacing.lua

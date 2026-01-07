@@ -2,19 +2,20 @@
 // Define the author and report details here
 #let data = (
   university: (
-    name: "Trường Đại Học TP. Hồ Chí Minh",
+    name: "Đại Học Quốc Gia Thành Phố Hồ Chí Minh",
     college: "Trường Đại Học Công Nghệ Thông Tin",
     center: "Trung Tâm Phát Triển Công Nghệ Thông Tin",
-    logo: "",
+    faculty: "Khoa Khoa Học Và Kỹ Thuật Thông Tin",
+    logo: "uit.jpeg",
   ),
   course: (
     id: "IE103",
-    name: "Quản Lý Thông Tin (Data Management)",
+    name: "Quản Lý Thông Tin",
     class: "LT.K2025.2.CNTT",
   ),
-  instructor: "Ths. Nguyễn Văn A",
+  instructor: "Ths. Nguyễn Thành Luân ",
   author: (
-    name: "Nhóm xx",
+    name: "Nhóm 02",
     members: (
       (
         name: lorem(3),
@@ -27,10 +28,10 @@
     ),
   ),
   assignment: (
-    title: "Bài Tập Thực Hành 1",
-    subtitle: "Thiết Kế Cơ Sở Dữ Liệu",
-    type: "Bài Tập Thực Hành",
-    date: "Dec, 2025",
+    title: "BÁO CÁO ĐỒ ÁN QUẢN LÝ THÔNG TIN",
+    subtitle: "Quản Lý Dữ Liệu Đặt Phòng Khách Sạn",
+    type: "Luận Án",
+    date: "TP.Hồ Chí Minh, tháng 01 năm 2026",
     duration: "15 phút",
   ),
   company: "A Limited Company Name",

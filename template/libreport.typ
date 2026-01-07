@@ -1,10 +1,3 @@
-// /template/lib.typ
-// Template library for reports and thesis
-// Author: Sam Dinh
-// Version: 0.1.0
-// License: MIT
-
-// MARK: Imports
 #import "fonts.typ": *
 #import "utils.typ": *
 #import "components/callout.typ": *
@@ -21,8 +14,7 @@
   author: (:),
   assignment: (:),
   // Lớp/Loại tài liệu, mặc định là report
-  doc-type: "report",
-  acronyms: none,
+  type: "report",
   ..args,
   body,
 ) = {
@@ -41,9 +33,6 @@
     justify: true,
     spacing: 1.5em,
   )
-
-  // MARK: Citation Text Style
-  show cite: set text(style: "italic", fill: blue)
 
   // MARK: Formatting - Headings
   set heading(numbering: "1.")
@@ -70,8 +59,8 @@
   set table(
     // Đường viền cho bảng
     stroke: 0.5pt + blue.lighten(90%),
-    // Màu nền cho hàng đầu tiên (header) và hàng chẵn (nhạt hơn)
-    fill: (x, y) => if y == 0 { blue.lighten(90%) } else if calc.even(y) { blue.lighten(98%) } else { none },
+    // Màu nền cho hàng đầu tiên (header)
+    fill: (x, y) => if y == 0 { blue.lighten(90%) },
   )
 
   // Bảng có góc bo tròn
@@ -127,7 +116,7 @@
     ]
   ]
 
-  // MARK: General Formatting
+  // MARK: Formatting - General
   // Emph & Strong
   show emph: it => text(style: "italic", weight: "medium")[#it.body]
   show strong: it => text(weight: "bold")[#it.body]
@@ -164,26 +153,6 @@
   )
   pagebreak()
 
-  // MARK: Thesis Summary
-  if doc-type == "thesis" {
-    // No Header/Footer, No Numbering
-    set page(header: none, footer: none, numbering: none)
-    // No Heading Numbering, No Outlined
-    set heading(numbering: none, outlined: false)
-    // We place the thesis summary here
-    include "/content/summary.typ"
-  }
-
-  // MARK: Report Author
-  if doc-type == "report" {
-    // No Header/Footer, No Numbering
-    set page(header: none, footer: none, numbering: none)
-    // No Heading Numbering, No Outlined
-    set heading(numbering: none, outlined: false)
-    // We place the author information here
-    include "/author/author.typ"
-  }
-
   // MARK: Front Matter
   // Roman numbering, Header/Footer active
   counter(page).update(1)
@@ -207,117 +176,66 @@
   show figure.where(kind: image): set figure(supplement: "Hình ảnh")
   show figure.where(kind: table): set figure(supplement: "Bảng")
 
-  // MARK: Table of Contents
+  // Table of Contents
   toc-section-wrapper(blue)[
     #unheading[Mục Lục]
     #outline(title: none, indent: auto, depth: 2)
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if doc-type == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
-  // MARK: List of Tables
+  // List of Tables
   toc-section-wrapper(blue)[
     #unheading[Danh Sách Bảng]
     #outline(title: none, target: figure.where(kind: table))
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if doc-type == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
-  // MARK: List of Figures
+  // List of Figures
   toc-section-wrapper(blue)[
     #unheading[Danh Sách Hình Ảnh]
     #outline(title: none, target: figure.where(kind: image))
   ]
 
   // Nếu tài liệu là luận văn, thêm trang trắng
-  if doc-type == "thesis" {
+  if type == "thesis" {
     pagebreak()
   }
 
-  // MARK: List of Code Snippets
+  // List of Code Snippets
   toc-section-wrapper(blue)[
     #unheading[Danh Sách Mã Nguồn]
     #outline(title: none, target: figure.where(kind: raw))
   ]
 
-  // MARK: List of TODOs (Conditional)
-  context {
-    let todos = query(figure.where(kind: "todo"))
-    // Chỉ hiện thị danh sách TODO nếu có
-    if todos.len() > 0 {
-      // Nếu tài liệu là luận văn, thêm trang trắng
-      if doc-type == "thesis" {
-        pagebreak()
-        toc-section-wrapper(red)[
-          #unheading[Danh Sách TODO]
-          #outline(title: none, target: figure.where(kind: "todo"))
-        ]
-      }
-    }
+  // Nếu tài liệu là luận văn, thêm trang trắng
+  if type == "thesis" {
+    pagebreak()
   }
 
-  // MARK: Bảng Viết Tắt
-  // Chỉ hiện thị bảng viết tắt nếu được chỉ định
-  if acronyms != none and acronyms.len() > 0 {
-    // Nếu tài liệu là luận văn, thêm trang trắng
-    if doc-type == "thesis" {
-      pagebreak()
+  // List of TODOs (Conditional)
+  context {
+    let todos = query(figure.where(kind: "todo"))
+    if todos.len() > 0 {
+      toc-section-wrapper(red)[
+        #unheading[Danh Sách TODO]
+        #outline(title: none, target: figure.where(kind: "todo"))
+      ]
     }
-
-    // Heading của bảng viết tắt
-    [ #unheading[Bảng Viết Tắt] ]
-
-    // Nếu acronyms là dictionary
-    let content = if type(acronyms) == dictionary {
-      acronyms.pairs().map(((key, value)) => (key, value)).flatten()
-      // Nếu acronyms là array
-    } else if type(acronyms) == array {
-      // Nếu file csv có sẵn header, bỏ header ra khỏi array
-      if acronyms.len() > 0 and acronyms.at(0).at(0) == "Viết Tắt" {
-        acronyms.slice(1).flatten()
-      } else {
-        acronyms.flatten()
-      }
-    } else {
-      ()
-    }
-
-    // Tạo bảng viết tắt
-    figure(
-      table(
-        // Tỉ lệ cột là 20% và 80%
-        columns: (20%, 80%),
-        // Khoảng cách giữa các cột
-        // gutter: 2em,
-        // Khoảng cách từ boder đến edge
-        inset: 0.5em,
-        // Màu border
-        stroke: 0.5pt + orange.lighten(90%),
-        // Căn lề cột
-        align: (right, left),
-        table.header([*Viết Tắt*], [*Nghĩa Đầy Đủ*]),
-        ..content,
-      ),
-      caption: [*Bảng Viết Tắt*],
-      kind: table,
-      // Đặc thù, không thêm vào danh sách bảng.
-      outlined: false,
-      // Không đánh số thứ tự cho bảng.
-      numbering: none,
-    )
   }
 
   // Spacing after TOC
   // v(2em)
   // v(0.5em)
 
-  // MARK: Nội Dung Chính
+  // MARK: Section - Main Content
   // Arabic numbering, Right aligned
   set page(numbering: "1", number-align: right)
   counter(page).update(1)
@@ -327,12 +245,13 @@
     // Tự động ngắt trang
     pagebreak()
     // Dành cho Report
-    if doc-type == "report" {
+    if type == "report" {
       align(left)[
         #set text(
           font: heading-font,
           size: 20pt,
           weight: "regular",
+          fill: black.lighten(60%),
         )
         #block(
           width: 100%,
@@ -367,7 +286,7 @@
     v(0.5em)
   }
 
-  // MARK: Footer
+  // MARK: Section - Footer
   // Footer with "Back to Top"
   set page(footer: context [
     #set text(size: 10pt, fill: gray)
@@ -417,10 +336,9 @@
 
 // MARK: Bibliography Helper
 // Tài liệu tham khảo
-#let bibliography-page(body) = {
+#let bibliography(body) = {
   counter(heading).update(0)
   set heading(numbering: "I", supplement: "Tài Liệu Tham Khảo")
-  show link: set text(fill: blue)
 
   show heading.where(level: 1): it => {
     pagebreak()
@@ -433,13 +351,11 @@
           size: 18pt,
           weight: "regular",
           fill: black.lighten(60%),
-          // Không hiển thị dòng chữ "Tài Liệu Tham Khảo"
-        )[],
+        )[TÀI LIỆU THAM KHẢO #counter(heading).display()],
         text(
           font: heading-font,
           size: 30pt,
           weight: "regular",
-          // Chỉ hiện thị tiêu đề thực tế, từ lệnh bibliography
         )[#it.body],
         line(length: 100%, stroke: 1pt + black.lighten(60%)),
       )

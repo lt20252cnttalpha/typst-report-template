@@ -1,6 +1,10 @@
-# University Assignment Template
+# University Report & Thesis Template
 
-This is a Typst template for university assignments, refactored to a modular, professional book-like structure.
+This is a Typst template for university reports and thesis, refactored to a modular, professional book-like structure.
+
+## Resources
+
+- [Thesis Structure - AthenaCheck](https://athenacheck.nl/en/knowledge-base/writing/thesis-structure/thesis-structure)
 
 ## Example
 
